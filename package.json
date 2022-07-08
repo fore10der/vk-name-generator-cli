@@ -3,15 +3,27 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "start": "node ./src/index.js"
+    "start": "node ./src/index.js",
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@jest/globals": "^28.1.2",
     "cheerio": "^1.0.0-rc.12"
   },
   "devDependencies": {
-    "jest": "^28.1.2"
+    "babel-jest": "^28.1.2",
+    "jest": "^28.1.2",
+    "jest-fetch-mock": "^3.0.3"
+  },
+  "jest": {
+    "automock": false,
+    "resetMocks": false,
+    "setupFiles": [
+      "./setupTests.js"
+    ]
   }
 }

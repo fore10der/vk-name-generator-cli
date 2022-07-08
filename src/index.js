@@ -1,4 +1,4 @@
-const fetchRandomName = require('./fetchRandomName')
+import fetchRandomName from "./fetchRandomName.js";
 
 async function main() {
     console.log(await fetchRandomName())

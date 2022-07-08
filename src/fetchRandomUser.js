@@ -1,5 +1,6 @@
-const cheerio = require("cheerio");
-const fetchRandomUser = async (max) => {
+import * as cheerio from "cheerio";
+
+export const fetchRandomUser = async (max) => {
     const random = Math.floor(Math.random() * max) + 1;
 
 
@@ -18,4 +19,4 @@ const fetchRandomUser = async (max) => {
         })
 }
 
-module.exports = fetchRandomUser
+export default fetchRandomUser;

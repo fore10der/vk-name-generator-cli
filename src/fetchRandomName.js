@@ -1,6 +1,5 @@
-const cheerio = require('cheerio');
-const fetchRandomUser = require('./fetchRandomUser')
-
+import fetchRandomUser from "./fetchRandomUser.js";
+import * as cheerio from "cheerio";
 
 const fetchRandomName = async () => {
     const count = await fetch('https://vkfaces.com/vk/users')
@@ -20,4 +19,4 @@ const fetchRandomName = async () => {
     return firstName + ' ' + secondName
 }
 
-module.exports = fetchRandomName
+export default fetchRandomName
